@@ -20,7 +20,7 @@
                     <li id="aboutme" class="current_page_item"><a href="#aboutme" onclick="tab_aboutme()">About Me</a></li>
                     <li id="publications" class=""><a href="#publications" onclick="tab_publications()">Publications</a></li>
                     <!-- <li id="projects" class=""><a href="#projects" onclick="tab_projects()">Projects</a></li> -->
-                    <li id="misc" class=""><a href="#misc" onclick="tab_misc()">Misc</a></li>
+                    <li id="misc" class=""><a href="#misc" onclick="tab_misc()">Self Media</a></li>
                     <li id="personal" class=""><a href="#personal" onclick="tab_personal()">Personal</a></li>
                 </ul>
             </div>
@@ -28,11 +28,11 @@
 
         <!-- 个人介绍页 -->
         <div id="div_aboutme" class="container" style="display:block">
-            <div class="photo_containter"><img src="images/profile-2.jpg" alt="" />
+            <div class="photo_container"><img src="images/profile-2.jpg" alt="" />
                 <p>Clear Water Bay, Hong Kong<br> spengai@connect.ust.hk
                 </p>
             </div>
-            <div class="cv_containter">
+            <div class="cv_container">
                 <h2 style="color: #5BA689; font-family:'Arial','myfont' "><strong>Siyu Peng</strong> 🍀 彭思雨</h2>
                 <p>Researching in 🔍 AI governance, 🤖 human-computer interaction, and 👥 intelligent communication.</p>
 
@@ -63,27 +63,22 @@
                 <!-- <div class="expand" onclick=toggle()>Expand</div> -->
             </div>
 
-            <div class="news_containter">
-                <!-- <div>May, 2025 · CHI Conference, 📍Yokohama, Japan</div>
-                <div>Apr, 2025 · IEEE PacificVis, 🏆 Best Paper Award</div>
-                <div>Dec, 2024 · CSIG Young Scientist Conference, 🏆 Best Poster, 📍Hangzhou, China</div>
-                <div>Nov, 2024 · ChineseCHI, 📍Shenzhen, China</div>
-                <div>Oct, 2024 · IEEE VIS, 🏆 Best Paper Honorable Mention Award </a></div>
-                <div>Oct, 2024 · IEEE VIS, <a href="https://gen4ds.github.io/gen4ds/#/" target="_blank"> Workshop on Data Storytelling in an Era of Generative AI </a></div>
-                <div class="expand-content">Aug, 2024 · Data Journalism Workshop, 📍Changchun, China</div>
-                <div class="expand-content">Jul, 2024 · ChinaVis Conference, 📍Hong Kong, China</div>
-                <div class="expand-content">Jun, 2024 · Talk, NWU, 📍Xi'an, China</div>
-                <div class="expand-content">May, 2024 · CHI Conference, 📍Honolulu, US</div>
-                <div class="expand-content">Apr, 2024 · Talk, NJU, 📍Nanjing, China</div>
-                <div class="expand-content">Jan, 2024 · Talk, SCU Vis Lab, 📍Chengdu, China</div>
-                <div class="expand-content">Oct, 2023 · Talk & 🏆 Best Paper Award, IEEE VIS 2023 Conference, 📍Melbourne, Australia</div>
-                <div class="expand-content">Aug, 2023 · HHME-CHCI 2023 Conference, 📍Harbin, China</div>
-                <div class="expand-content">Jul, 2023 · ChinaVis 2023 Conference, 📍Chongqing, China</div>
-                <div class="expand-content">May, 2023 · Won China Society of Image and Graphics (CSIG) Natural Science Award, Second Prize</div>
-                <div class="expand-content">Mar, 2023 · Published my first book</div>
-                <div class="expand-content">Dec, 2022 · Joined Fudan University</div>
-                <div class="expand-content">Jul, 2022 · Talk & Panel Host, ChinaVis 2022 Conference, 📍Xining, China</div>
-                <div class="expand-content">Jul, 2022 · Passed my PhD dissertation defense</div> -->
+            <div class="news_container">
+                <div class="news-item">
+                    <div class="news-title" onclick="toggleNews(this)">
+                        <span>Nov 2025 · Computational Law International Conference 2025 📍 Shanghai, China</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="news-content">
+                        <p>My paper titled <em>Practical Legal Alignment Framework of Generative AI Information Credibility</em> was accepted for presentation on this Conference. This is my first interdisciplinary research work to connect communication, law, and AI alignment.</p>
+                    </div>
+                </div>
+
+                <div class="news-item">
+                    <div class="news-title" onclick="">
+                        <span>Sep 2024 · Start my Ph.D. journey in HKUST!</span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -93,8 +88,8 @@
             <!-- <div class="subtitle_container"><span class="subtitles">Research Work</span></div> -->
 
             <div class="box-style">
-                <div class="snap_containter"><img src="images/pub/chi-ea-2025.png" alt="" /></div>
-                <div class="pub_containter">
+                <div class="snap_container"><img src="images/pub/chi-ea-2025.png" alt="" /></div>
+                <div class="pub_container">
                     <span class="badge">CHI EA '25</span><strong> Scenario, Role, and Persona: A Scoping Review of Design Strategies for Socially Intelligent AI Agents</strong>
                     <br>Ruowen Niu, Jiaxiong Hu, <u>Siyu Peng</u>, Caleb Chen Cao, Chengzhong Liu, Sirui Han, Yike Guo
                     <br>Proceedings of the Extended Abstracts of the CHI Conference on Human Factors in Computing System.
@@ -186,6 +181,18 @@
         document.getElementById("div_misc").style.display = "none"
         document.getElementById("div_personal").style.display = "block"
 
+    }
+
+    function toggleNews(element) {
+        const content = element.nextElementSibling;
+        const arrow = element.querySelector('.arrow');
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            arrow.classList.remove("open");
+        } else {
+            content.style.display = "block";
+            arrow.classList.add("open");
+        }
     }
 </script>
 
