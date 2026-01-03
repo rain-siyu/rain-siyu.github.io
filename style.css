@@ -846,3 +846,27 @@ a:hover {}
     color: #555;
     font-style: italic;
 }
+
+.social-media-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.social-media-item {
+    text-align: center;
+}
+
+.social-media-item img {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.social-media-item p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #333;
+}
