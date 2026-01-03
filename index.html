@@ -21,7 +21,6 @@
                     <li id="publications" class=""><a href="#publications" onclick="tab_publications()">Publications</a></li>
                     <!-- <li id="projects" class=""><a href="#projects" onclick="tab_projects()">Projects</a></li> -->
                     <li id="misc" class=""><a href="#misc" onclick="tab_misc()">Self Media</a></li>
-                    <li id="personal" class=""><a href="#personal" onclick="tab_personal()">Personal</a></li>
                 </ul>
             </div>
         </div>
@@ -71,6 +70,10 @@
                     </div>
                     <div class="news-content">
                         <p>My paper titled <em>Practical Legal Alignment Framework of Generative AI Information Credibility</em> was accepted for presentation on this Conference. This is my first interdisciplinary research work to connect communication, law, and AI alignment.</p>
+                        <figure class="news-image-container">
+                            <img src="images/news/IMG_2698.JPG" alt="Presentation at Computational Law International Conference 2025">
+                            <figcaption>I gave the presentation on Computational Law International Conference 2025.</figcaption>
+                        </figure>
                     </div>
                 </div>
 
@@ -104,15 +107,6 @@
 
         </div>
 
-        <!-- 个人照片 -->
-        <div id="div_personal" class="container" style="display: none; margin-top: 50px;">
-            <div class="subtitle_container"><span class="subtitles">My Footprints:</span> &nbsp&nbsp Always on the road :D
-            </div>
-            <div class="gallery_container">
-                <img src="images/japan_4.jpeg" alt="" />
-            </div>
-        </div>
-
 </body>
 
 <script>
@@ -134,12 +128,10 @@
         document.getElementById("publications").className = ""
         document.getElementById("misc").className = ""
             // document.getElementById("projects").className = ""
-        document.getElementById("personal").className = ""
         document.getElementById("div_aboutme").style.display = "block"
         document.getElementById("div_publications").style.display = "none"
             // document.getElementById("div_projects").style.display = "none"
         document.getElementById("div_misc").style.display = "none"
-        document.getElementById("div_personal").style.display = "none"
     }
 
     function tab_publications() {
@@ -147,12 +139,10 @@
         document.getElementById("publications").className = "current_page_item"
         document.getElementById("misc").className = ""
             // document.getElementById("projects").className = ""
-        document.getElementById("personal").className = ""
         document.getElementById("div_aboutme").style.display = "none"
         document.getElementById("div_publications").style.display = "block"
             // document.getElementById("div_projects").style.display = "none"
         document.getElementById("div_misc").style.display = "none"
-        document.getElementById("div_personal").style.display = "none"
     }
 
 
@@ -161,27 +151,12 @@
         document.getElementById("publications").className = ""
         document.getElementById("misc").className = "current_page_item"
             // document.getElementById("projects").className = ""
-        document.getElementById("personal").className = ""
         document.getElementById("div_aboutme").style.display = "none"
         document.getElementById("div_publications").style.display = "none"
             // document.getElementById("div_projects").style.display = "none"
         document.getElementById("div_misc").style.display = "block"
-        document.getElementById("div_personal").style.display = "none"
     }
 
-    function tab_personal() {
-        document.getElementById("aboutme").className = ""
-        document.getElementById("publications").className = ""
-        document.getElementById("misc").className = ""
-            // document.getElementById("projects").className = ""
-        document.getElementById("personal").className = "current_page_item"
-        document.getElementById("div_aboutme").style.display = "none"
-        document.getElementById("div_publications").style.display = "none"
-            // document.getElementById("div_projects").style.display = "none"
-        document.getElementById("div_misc").style.display = "none"
-        document.getElementById("div_personal").style.display = "block"
-
-    }
 
     function toggleNews(element) {
         const content = element.nextElementSibling;

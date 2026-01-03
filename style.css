@@ -828,3 +828,21 @@ a:hover {}
 .arrow.open {
     transform: rotate(180deg);
 }
+
+.news-image-container {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.news-image-container img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.news-image-container figcaption {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #555;
+    font-style: italic;
+}
